@@ -1,74 +1,35 @@
-# Medical Imaging & Analysis
+# Segmenting the Heart from Cardiac MRI
 
-## Overview
+How well can you outline the right atrium of the heart by hand from MRI scans, and how do you measure "well"?
 
-Biomedical engineering project involving manual segmentation of the right atrium from cardiac MRI data and quantitative validation of the segmentation using 3D Slicer and MATLAB.
+**Individual coursework · Processing and Analysis in Medical Imaging · Queen Mary University of London, 2024–25**
 
-## Project Aim
+## What I did
 
-The project aimed to evaluate the reliability of manual cardiac MRI segmentation by comparing the segmented right atrium against gold-standard data using quantitative performance metrics.
+Using public cardiac MRI data from the Atrial Segmentation Challenge Dataset, I segmented the right atrium by hand in 3D Slicer, adjusting intensity thresholds and refining the outline slice by slice. I then exported the segmentation and used MATLAB to compare it against the gold-standard segmentation, calculating precision, recall and the Dice score.
 
-## My Work
+## What went wrong
 
-I:
+My precision looked excellent at first: almost everything I marked as right atrium really was. But the recall showed I had missed a large part of it, especially around the boundaries. It was a good lesson in not trusting a single metric. Precision on its own made the segmentation look far better than it was.
 
-- Worked with publicly available cardiac MRI data from the Atrial Segmentation Challenge Dataset
-- Performed manual right atrial segmentation using 3D Slicer
-- Adjusted image intensity thresholds and refined the segmentation slice by slice
-- Exported the completed segmentation for quantitative analysis
-- Used MATLAB to compare the segmentation against gold-standard data
-- Calculated precision and Dice metrics to objectively evaluate segmentation performance
-## Project Visuals
+## Results
 
-### 3D Slicer Segmentation
+- Precision: **91.65%**
+- Recall: **41.77%**
+- Dice score: **0.574**
 
-Manual right atrial segmentation performed on cardiac MRI data using 3D Slicer.
+The segmentation matched the gold standard well visually, with most of the disagreement at the edges of the atrium.
 
-![3D Slicer RA segmentation](https://raw.githubusercontent.com/yemesis/medical-imaging-analysis/main/figures/3d-slicer-ra-segmentation.png)
-
-### Segmentation vs Gold Standard
-
-Side-by-side comparison of the manually segmented right atrium and the gold-standard segmentation for a selected MRI slice.
+![3D Slicer segmentation](https://raw.githubusercontent.com/yemesis/medical-imaging-analysis/main/figures/3d-slicer-ra-segmentation.png)
 
 ![Segmentation vs gold standard](https://raw.githubusercontent.com/yemesis/medical-imaging-analysis/main/figures/segmentation-vs-gold-standard.png)
 
-### Segmentation Performance
-
-Quantitative evaluation of the manual segmentation using overall precision, recall and Dice score.
-
 ![Segmentation performance](https://raw.githubusercontent.com/yemesis/medical-imaging-analysis/main/figures/segmentation-performance.png)
-## Key Findings
-
-The manual right atrial segmentation achieved an overall precision of **91.65%**, indicating a high proportion of correctly classified predicted RA pixels.
-
-Additional evaluation produced a **recall of 41.77%** and a **Dice score of 0.574**, highlighting the importance of using multiple metrics to assess segmentation performance rather than relying on precision alone.
-
-The comparison with the gold-standard segmentation showed strong visual agreement, while also identifying discrepancies around some boundary regions.
-
-## Methods
-
-- Cardiac MRI analysis
-- Manual image segmentation
-- Image processing
-- Quantitative validation
-- Precision analysis
-- Dice score analysis
 
 ## Tools
 
-- 3D Slicer
-- MATLAB
+3D Slicer · MATLAB
 
-## Skills Demonstrated
+## Files
 
-- Medical image analysis
-- Data analysis
-- Quantitative evaluation
-- Attention to detail
-- Scientific research
-- Technical interpretation
-- Data visualisation
-
-## Project Materials
-
-The full project report is available in this repository.
+- [Full report](./medical-imaging-analysis-report.pdf)
